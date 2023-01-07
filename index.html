@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCIficador</title>
+    <link href="css.css" rel="stylesheet">
+    <script src="pegarvideo.js" defer></script>
+
+</head>
+<body>
+    <div class="opcoes">
+    <input type="radio" onchange="mudarradio(this)" value="arquivo" name="tipoentrada"> Usar arquivo <input id="arquivo"  style="visibility: hidden ;" onchange="pintar(this)"  type="file" id="entradaarquivo" accept="image/*">
+    <input type="radio" onchange="mudarradio(this)" value="webcam" name="tipoentrada"> Usar Webcam <button id="bwebcam" style="visibility: hidden ;" onclick="gravar(this)">pegar video da webcam</button>
+    </div>
+
+
+
+    <div class="visualizar">
+    <video id="entradavideo" width="400" height="300" muted style="display: none;"  ></video>
+    <canvas id="imageminicial" width="300" height="300" style="border: 1px solid red;">O navegador não suporta canvas.</canvas>
+    <pre id="resultadoascii"></pre>
+    <canvas id="imagemfinal" width="300" height="300" style=" display:none; border: 1px solid green;">Atualize seu navegador.</canvas>
+    </div>
+
+    
+    
+
+</body>
+</html>
+
+
+
+
+
